@@ -34,7 +34,6 @@ RSEe2<- with(dt1, sqrt(sum(((He2-H)^2)/summary(mode2)$df[2])))
 Hmenten<- predict(menten)
 resid.men <- dt1$H- Hmenten
 RSEmenten <- sqrt(sum(resid.men^2, na.rm = TRUE)/summary(menten)$df[2])
-
 #RSE
 RSEc
 RSEe2
@@ -46,8 +45,6 @@ with(dt1, plot(DAP,H))
 mx<-seq(5,118,0.1)
 my.2.2<-53.383 *mx/(30.096+mx)
 lines(mx,my.2.2, col="blue")
-
-
 #Validacion 
 #error en base al archivo de validacion
 dtv<-dt[-w,]
