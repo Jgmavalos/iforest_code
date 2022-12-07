@@ -1,11 +1,9 @@
 dt<-read.csv2("Datos_P2.csv")
 str(dt)
 colnames(dt)<-c("No","DAP","H")
-
 set.seed(150)
 w<- sample(1:358,251)
 range(dt$DAP)
-
 #Datos para la determinacion del modelo
 dt1<- dt[w,]
 range(dt$DAP)
