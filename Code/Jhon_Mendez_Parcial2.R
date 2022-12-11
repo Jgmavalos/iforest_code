@@ -1,3 +1,9 @@
+#Este código parece ser un script en R que utiliza diferentes técnicas de modelado para analizar un conjunto de datos y determinar cuál de los modelos es el más adecuado para describir los datos. En primer lugar, se cargan los datos del archivo "Datos_P2.csv" en un data frame de R llamado "dt" y se imprime un resumen de los datos utilizando la función "str". Luego se cambian los nombres de las columnas del data frame para reflejar los datos que contienen. Se establece una semilla aleatoria utilizando la función "set.seed" y se selecciona un subconjunto aleatorio de los datos originales utilizando la función "sample".
+
+#Luego se utilizan tres diferentes modelos para ajustar los datos: un modelo lineal cuadrático, un modelo exponencial cuadrático y un modelo de Michaelis-Menten. Para cada uno de estos modelos, se realiza una prueba de Shapiro-Wilk para verificar la normalidad de los residuos. Luego se calcula el error cuadrático medio (MSE) para cada modelo y se utiliza para determinar cuál es el mejor modelo.
+
+#Finalmente, se utiliza el mejor modelo para hacer predicciones sobre un conjunto de datos de validación y se calcula el error medio y la desviación estándar del error.
+
 dt<-read.csv2("Datos_P2.csv")
 str(dt)
 colnames(dt)<-c("No","DAP","H")
