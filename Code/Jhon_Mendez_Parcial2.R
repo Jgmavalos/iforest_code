@@ -12,7 +12,7 @@ w<- sample(1:358,251)
 range(dt$DAP)
 #Datos para la determinacion del modelo
 dt1<- dt[w,]
-range(dt$DAP)
+range(dt1$DAP)
 
 modc<-lm(H~DAP+I(DAP^2),dt1)
 mode2<-lm(log(H)~log(DAP)+I((log(DAP))^2),dt1)
